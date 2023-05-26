@@ -52,10 +52,16 @@ void doublelinkedlist::addnode() {
 
 	/*inserting anode between two nodes in the list*/
 	node* current = start; //step1.a
-	node* pevious = NULL; //step1.b
+	node* previous = NULL; //step1.b
 	while (current->next != NULL && current->next->nomhs < nim) //step1.c
 	{
-		preious
+		previous = current; //step1.d
+		current = current->next; //step1.e
+	}
+
+	if (current->next != NULL && nim == current->next->nomhs) {
+		cout << "\nduplicate roll numbers not allowed" << endl;
+		return;
 	}
 
 		
