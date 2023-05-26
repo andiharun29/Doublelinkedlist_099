@@ -51,6 +51,12 @@ void doublelinkedlist::addnode() {
 	}
 
 	/*inserting anode between two nodes in the list*/
+	node* current = start; //step1.a
+	node* pevious = NULL; //step1.b
+	while (current->next != NULL && current->next->nomhs < nim) //step1.c
+	{
+		preious
+	}
 
 		
 
