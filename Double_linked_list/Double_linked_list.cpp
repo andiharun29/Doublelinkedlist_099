@@ -81,14 +81,14 @@ bool doublelinkedlist::search(int rollno, node** previous, node** current) {
 	return (*current != NULL);
 }
 
-bool doublelinkedlist::deletenode(int rollno) {
-	node* previous, * current;
-	previous = current = NULL;
+bool doublelinkedlist::deletenode;
 	if (search(rollno, &previous, &current) == false)
 		return false;
 	if (current->next != NULL)
 		current->next->prev = previous; //step2
-	if (previous != NULL)
+	if (previous != NUL(int rollno) {
+	node* previous, * current;
+	previous = current = NULLL)
 		previous->next = current->next;
 	else
 		start = current->next;
@@ -131,3 +131,16 @@ void doublelinkedlist::revtraverse() {
 	}
 }
 
+void doublelinkedlist::hapus() {
+	if (listempty()) {
+		cout << "\nlist is empty" << endl;
+	}
+	cout << "\nenter the roll number of the  whose record is to be deleted: ";
+	int rollno;
+	cin >> rollno;
+	cout << endl;
+	if (doublelinkedlist::deletenode(rollno) == false)
+		cout << "record not found" << endl;
+	else
+		cout << "recordwith roll number" << rollno << "deleted" << endl;
+}
