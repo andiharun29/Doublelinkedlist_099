@@ -42,7 +42,16 @@ void doublelinkedlist::addnode() {
 			cout << "\nduplicate number not allowed" << endl;
 			return;
 		}
-		
+		newnode->next = start; //step3
+		if (start != NULL)
+			start->prev = newnode; //step4
+		newnode->prev = NULL; //step5
+		start = newnode; // step6
+		return;
+	}
+
+	/*inserting anode between two nodes in the list*/
+
 		
 
 }
