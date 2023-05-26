@@ -38,7 +38,11 @@ void doublelinkedlist::addnode() {
 
 	/*insert a node in the beginning of a doubly linked list*/
 	if (start == NULL || nim <= start->nomhs) { //check if data null
-
-	}
+		if (start == NULL && nim == start->nomhs) {
+			cout << "\nduplicate number not allowed" << endl;
+			return;
+		}
+		
+		
 
 }
