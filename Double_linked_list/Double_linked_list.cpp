@@ -109,7 +109,25 @@ void doublelinkedlist::traverse() {
 		node* currentnode = start;
 		while (currentnode != NULL) {
 			cout << currentnode->nomhs << " " << currentnode->name << endl;
-			currentnode = currentnode->next
+			currentnode = currentnode->next;
 		}
 	}
 }
+
+void doublelinkedlist::revtraverse() {
+	if (listempty()) {
+		cout << "\nlist is empty" << endl;
+	}
+	else {
+		cout << "\nrecord in descending order of roll number are: " << endl;
+		node* currentnode = start;
+		while (currentnode->next != NULL) 
+			currentnode = currentnode->next;
+
+		while (currentnode != NULL) {
+			cout << currentnode->nomhs << " " << currentnode->name << endl;
+			currentnode = currentnode->prev;
+		}
+	}
+}
+
