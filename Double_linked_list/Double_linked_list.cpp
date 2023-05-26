@@ -164,5 +164,46 @@ void doublelinkedlist::searchdata() {
 
 int main() {
 	doublelinkedlist obj;
+	while (true) {
+		try {
+			cout << "\nmenu" << endl;
+			cout << "1. add a record to the list" << endl;
+			cout << "2. delete a record from the list" << endl;
+			cout << "3. view all record in the ascending order of roll numbers" << endl;
+			cout << "4. view all record in the desscending order of roll numbers" << endl;
+			cout << "5. search for a record in the list" << endl;
+			cout << "6.exit" << endl;
+			cout << "\nenter your choise (1-6): ";
+			char ch;
+			cin >> ch;
+
+			switch (ch) {
+			case '1':
+				obj.addnode();
+				break;
+			case '2':
+				obj.hapus();
+				break;
+			case '3':
+				obj.traverse();
+				break;
+			case '4':
+				obj.revtraverse();
+				break;
+			case '5':
+				obj.searchdata();
+				break;
+			case '6':
+				return 0;
+				default
+					cout << "\ninvalid option" << endl;
+				break;
+			}
+
+		}
+		catch (exception& e) {
+			cout << "check for the values entered." << endl;
+		}
+	}
 
 }
