@@ -25,6 +25,11 @@ public:
 };
 
 void doublelinkedlist::addnode() {
-	
+	int nim;
+	string nm;
+	cout << "\nenter the roll number of the student: ";
+	cin >> nim;
+	cout << "\nenter the name of the student: ";
+	cin >> nm;
 
 }
