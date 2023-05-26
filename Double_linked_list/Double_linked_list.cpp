@@ -9,11 +9,12 @@ public:
 	node* next;
 	node* prev;
 };
+
 class doublelinkedlist {
 private:
 	node* start = NULL;
 public:
-	void addnote();
+	void addnode();
 	bool search(int rollno, node** previous, node** current);
 	bool deletenode(int rollno);
 	bool listempty();
@@ -21,7 +22,9 @@ public:
 	void revtraverse();
 	void hapus();
 	void searchdata();
-
-
-
 };
+
+void doublelinkedlist::addnode() {
+	
+
+}
